@@ -30,7 +30,6 @@ async function get_Todos() {
 
 let selectedRadio = () => {
     let selected = document.querySelector("input[name = 'status']:checked").value
-    
     return selected
 }
 
@@ -168,7 +167,7 @@ function display_Todos(todoArr) {
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
                 del_Todo(todoArr[i])
-                loaderF()
+                    .then(get_Todos())
             })
 
             createTodo.addEventListener("dblclick", () => {
