@@ -34,6 +34,11 @@ let selectedRadio = () => {
     return selected
 }
 
+async function loaderF() {
+    loader.classList.remove('loader-hidden')
+    loader.classList.add('loader-hidden')
+}
+
 function display_Todos(todoArr) {
 
     for (let i = 0; i < todoArray.length; i++) {
@@ -254,11 +259,7 @@ async function edit_Todo(todoElem) {
     }
 }
 
-async function loaderF() {
-    loader.classList.remove('loader-hidden')
-    display_Todos()
-    loader.classList.add('loader-hidden')
-}
+
 
 async function post_todos() {
     try {
