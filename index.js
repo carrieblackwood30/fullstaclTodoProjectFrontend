@@ -28,22 +28,15 @@ async function get_Todos() {
     }
 }
 
-let selectedRadio = () => {
+let selectedRadio = async() => {
     let selected = document.querySelector("input[name = 'status']:checked").value
-
+    await fetch(URL)
     return selected
 }
 
 async function loaderF() {
     loader.classList.remove('loader-hidden')
     get_Todos()
-    .then((todoArr) => {
-        todoArray = todoArr
-        console.log(todoArr)
-        display_Todos(todoArr)
-        loaderF()
-    })
-    .catch((err) => console.log(err))
     loader.classList.add('loader-hidden')
 }
 
