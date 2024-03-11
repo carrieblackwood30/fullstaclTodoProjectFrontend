@@ -30,7 +30,7 @@ async function get_Todos() {
 
 let selectedRadio = () => {
     let selected = document.querySelector("input[name = 'status']:checked").value
-
+    display_Todos()
     return selected
 }
 
@@ -287,7 +287,6 @@ get_Todos()
         todoArray = todoArr
         console.log(todoArr)
         display_Todos(todoArr)
-        loaderF()
     })
     .catch((err) => console.log(err))
 
