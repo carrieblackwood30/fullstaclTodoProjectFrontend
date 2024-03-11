@@ -36,7 +36,6 @@ let selectedRadio = () => {
 
 async function loaderF() {
     loader.classList.remove('loader-hidden')
-    await get_Todos()
     loader.classList.add('loader-hidden')
 }
 
@@ -171,8 +170,8 @@ function display_Todos(todoArr) {
 
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
-                window.location.reload()
                 del_Todo(todoArr[i])
+                window.location.reload()
             })
 
             createTodo.addEventListener("dblclick", () => {
