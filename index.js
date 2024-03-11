@@ -16,7 +16,7 @@ const loader = document.querySelector(".loaderBg")
 
 let todoArray = []
 
-const URL = "https://youthful-juicy-hope.glitch.me"
+const URL = "https://youthful-juicy-hope.glitch.me/todos"
 
 async function get_Todos() {
     try {
