@@ -56,7 +56,7 @@ function display_Todos(todoArr) {
 
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
-                window.location.reload()
+                
                 del_Todo(todoArr[i])
             })
             createTodo.addEventListener("dblclick", () => {
@@ -71,7 +71,7 @@ function display_Todos(todoArr) {
                         createTodo.innerHTML = inputEdit.value
                         createTodo.append(createDelBtn)
                         inputEdit.style.display = "none"
-                        window.location.reload()
+                        
                         loaderF()
                     }
                 })
@@ -93,7 +93,7 @@ function display_Todos(todoArr) {
             finishedDiv.append(createTodo)
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
-                window.location.reload()
+                
                 del_Todo(todoArr[i])
             })
 
@@ -109,7 +109,7 @@ function display_Todos(todoArr) {
                         createTodo.innerHTML = inputEdit.value
                         createTodo.append(createDelBtn)
                         inputEdit.style.display = "none"
-                        window.location.reload()
+                        
                         loaderF()
                     }
                 })
@@ -132,7 +132,7 @@ function display_Todos(todoArr) {
 
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
-                window.location.reload()
+                
                 del_Todo(todoArr[i])
             })
 
@@ -148,7 +148,7 @@ function display_Todos(todoArr) {
                         createTodo.innerHTML = inputEdit.value
                         createTodo.append(createDelBtn)
                         inputEdit.style.display = "none"
-                        window.location.reload()
+                        
                         loaderF()
                     }
                 })
@@ -171,7 +171,6 @@ function display_Todos(todoArr) {
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
                 del_Todo(todoArr[i])
-                window.location.reload()
             })
 
             createTodo.addEventListener("dblclick", () => {
@@ -186,7 +185,6 @@ function display_Todos(todoArr) {
                         createTodo.innerHTML = inputEdit.value
                         createTodo.append(createDelBtn)
                         inputEdit.style.display = "none"
-                        window.location.reload()
                         loaderF()
                     }
                 })
@@ -214,7 +212,7 @@ function display_Todos(todoArr) {
                         name: data.item[0].innerText.slice(0, - 2)
                     })
                     // loaderF()
-                    // window.location.reload()
+                    // 
                 },
             }).disableSelection();
         });
