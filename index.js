@@ -36,6 +36,7 @@ let selectedRadio = () => {
 
 async function loaderF() {
     loader.classList.remove('loader-hidden')
+    await get_Todos()
     loader.classList.add('loader-hidden')
 }
 
