@@ -205,7 +205,7 @@ function display_Todos(todoArr) {
                     }
                     // loaderF()
                     todoArr.find(todo => todo.id === todoId).status = status
-                    await axios.put(`https://youthful-juicy-hope.glitch.me/todos${todoId}`, {
+                    await axios.put(`https://youthful-juicy-hope.glitch.me/todos/${todoId}`, {
                         status: status,
                         name: data.item[0].innerText.slice(0, - 2)
                     })
