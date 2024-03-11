@@ -28,9 +28,9 @@ async function get_Todos() {
     }
 }
 
-let selectedRadio = async() => {
+let selectedRadio = () => {
     let selected = document.querySelector("input[name = 'status']:checked").value
-
+    
     return selected
 }
 
