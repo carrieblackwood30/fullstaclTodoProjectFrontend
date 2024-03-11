@@ -36,6 +36,7 @@ let selectedRadio = () => {
 
 async function loaderF() {
     loader.classList.remove('loader-hidden')
+    display_Todos()
     loader.classList.add('loader-hidden')
 }
 
@@ -56,7 +57,7 @@ function display_Todos(todoArr) {
 
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
-                
+                loaderF()
                 del_Todo(todoArr[i])
             })
             createTodo.addEventListener("dblclick", () => {
@@ -71,7 +72,6 @@ function display_Todos(todoArr) {
                         createTodo.innerHTML = inputEdit.value
                         createTodo.append(createDelBtn)
                         inputEdit.style.display = "none"
-                        
                         loaderF()
                     }
                 })
@@ -93,7 +93,7 @@ function display_Todos(todoArr) {
             finishedDiv.append(createTodo)
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
-                
+                loaderF()
                 del_Todo(todoArr[i])
             })
 
@@ -109,7 +109,6 @@ function display_Todos(todoArr) {
                         createTodo.innerHTML = inputEdit.value
                         createTodo.append(createDelBtn)
                         inputEdit.style.display = "none"
-                        
                         loaderF()
                     }
                 })
@@ -132,7 +131,7 @@ function display_Todos(todoArr) {
 
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
-                
+                loaderF()
                 del_Todo(todoArr[i])
             })
 
@@ -148,7 +147,6 @@ function display_Todos(todoArr) {
                         createTodo.innerHTML = inputEdit.value
                         createTodo.append(createDelBtn)
                         inputEdit.style.display = "none"
-                        
                         loaderF()
                     }
                 })
@@ -171,6 +169,7 @@ function display_Todos(todoArr) {
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
                 del_Todo(todoArr[i])
+                loaderF()
             })
 
             createTodo.addEventListener("dblclick", () => {
