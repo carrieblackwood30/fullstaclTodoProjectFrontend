@@ -30,7 +30,6 @@ async function get_Todos() {
 
 let selectedRadio = async() => {
     let selected = document.querySelector("input[name = 'status']:checked").value
-    await display_Todos()
     window.location.reload()
     return selected
 }
