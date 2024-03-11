@@ -167,7 +167,7 @@ function display_Todos(todoArr) {
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
                 del_Todo(todoArr[i])
-                    .then(location.reload())
+                    .then(location.reload([forceGet]))
             })
 
             createTodo.addEventListener("dblclick", () => {
