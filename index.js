@@ -167,7 +167,6 @@ function display_Todos(todoArr) {
             createDelBtn.addEventListener("click", (e) => {
                 e.stopPropagation()
                 del_Todo(todoArr[i])
-                get_Todos()
                 loaderF()
             })
 
