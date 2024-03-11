@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="loaderBg">
+        <div class="lds-hourglass"></div>
+    </div>
+
+    <section class="form-section">
+
+        <div class="form-conainer">
+            <input type="text" class="input" placeholder="create a task..">
+            <button class="createBtn"> create </button>
+
+            <div class="form-bottom">
+                <input type="radio" value="active" name="status" class="Radio" id="active">
+                <label for="status">Active</label>
+
+                <input type="radio" value="finished" name="status" class="Radio">
+                <label for="status">finished</label>
+
+                <input type="radio" value="onHold" name="status" class="Radio">
+                <label for="status">On Hold</label>
+
+                <input type="radio" value="canceled" name="status" class="Radio">
+                <label for="status">Canceled</label>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="todo-list">
+        <div class="card">
+            <h3>ACTIVE</h3>
+            <div class="active todos" data-status="active">
+            </div>
+        </div>
+        <div class="card">
+            <h3>ON HOLD</h3>
+            <div class="onHold todos" data-status="onHold">
+            </div>
+        </div>
+        <div class="card">
+            <h3>FINISHED</h3>
+            <div class="finished todos" data-status="finished">
+            </div>
+        </div>
+        <div class="card">
+            <h3>CANCELED</h3>
+            <div class="canceled todos" data-status="canceled">
+            </div>
+        </div>
+    </section>
+
+    <div id="result"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

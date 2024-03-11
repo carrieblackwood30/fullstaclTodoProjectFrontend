@@ -1,0 +1,149 @@
+body {
+    background-color: #181825;
+    overflow: hidden;
+}
+
+.form-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.form-conainer {
+    background-color: #373A36;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.input {
+    width: 30rem;
+    height: 2rem;
+    border-radius: 10px;
+}
+
+.createBtn {
+    cursor: pointer;
+    width: 5rem;
+    height: 2.5rem;
+    font-weight: large;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+}
+
+.form-bottom {
+    margin-top: 1rem;
+    color: #E6E2DD;
+    font-size: 1.2rem;
+}
+
+.todo-list {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.card {
+    text-align: center;
+    background-color: #13391d;
+    color: #E3B136;
+    width: 20rem;
+    border-radius: 10px;
+    height: 30rem;
+}
+
+.card h3 {
+    border-bottom: 3px solid #C19F1C;
+    padding-bottom: 1rem;
+}
+
+.todo {
+    background-color: #181825;
+    width: 16rem;
+    margin: auto;
+    border: solid 7px #41403E;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: .5rem;
+    position: relative;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.closeTodoBtn {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+.editInput {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.loaderBg {
+    background-color: grey;
+    opacity: 90%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.loader-hidden {
+    display: none;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}
+
+.lds-hourglass:after {
+
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid orange;
+    border-color: orange transparent orange transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+    0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    100% {
+        transform: rotate(1800deg);
+    }
+}
