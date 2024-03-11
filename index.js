@@ -296,9 +296,9 @@ get_Todos()
     })
     .catch((err) => console.log(err))
 
-createTodoBtn.addEventListener("click", () => {
+createTodoBtn.addEventListener("click", (event) => {
+    event.preventDefault()
     loaderF()
-    window.location.reload()
     if (inputTodo.value != '') {
         post_todos()
     }
