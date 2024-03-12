@@ -230,6 +230,7 @@ async function del_Todo(todoElem) {
         const resp = await fetch(del_url, options)
         const data = await resp.json()
         console.log(data)
+        window.location.reload()           
     } catch (err) {
         return err
     }
@@ -251,6 +252,7 @@ async function edit_Todo(todoElem) {
         };
         const resp = await fetch(edit_url, options)
         const data = await resp.json()
+        window.location.reload()    
         return data
     } catch (err) {
         return err
@@ -273,6 +275,7 @@ async function post_todos() {
         }
         const resp = await fetch(URL, options)
         const data = await resp.json()
+        window.location.reload()       
         return data
     } catch (err) {
         return err
